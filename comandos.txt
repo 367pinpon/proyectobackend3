@@ -1,0 +1,9 @@
+npm i express
+npm i nodemon -D
+npm i mongoose
+npm i dotenv
+
+correr programa: npm run start
+
+llave del mongo
+MONGODB_URI=mongodb+srv://pepitogonzales:123@cluster0.44f0squ.mongodb.net/?retryWrites=true&w=majority

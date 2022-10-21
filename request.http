@@ -1,0 +1,158 @@
+###generando 
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "pepito gonzales",
+    "age": 42,
+    "email": "pepe@gmail.com",
+    "password": "123411",
+    "rol": "Auxiliar",
+    "sucursal": 801
+}
+
+###obtener usuarios
+GET http://localhost:9000/api/users HTTP/1.1
+
+###obtener por id
+GET http://localhost:9000/api/users/6350ea1ee372b3f275abd36c HTTP/1.1
+
+###editar
+PUT http://localhost:9000/api/users/6350ea1ee372b3f275abd36c HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "ramon trinidadDDDD",
+    "age": 18,
+    "email": "trini@gmail.com",
+    "password": "12345",
+    "rol": "Supervisor",
+    "sucursal": 801
+}
+
+###borrar 
+DELETE http://localhost:9000/api/users/6350ea1ee372b3f275abd36c HTTP/1.1
+
+
+###generando rol
+POST http://localhost:9000/api/roles HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Limpieza",
+    "codigo": 13
+}
+
+###obtener rol
+GET http://localhost:9000/api/roles HTTP/1.1
+
+
+###generar sucursal
+POST http://localhost:9000/api/sucursales HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Surcursal Uno",
+    "codigo": 801,
+    "tlf": 555080,
+    "adress": "Blv Insurgentes 5561",
+    "adresspace": "32.49809, -116.8695",
+    "status": "Cerrado"
+}
+
+###obtener sucursales
+GET http://localhost:9000/api/sucursales HTTP/1.1
+
+###editar sucursal
+PUT http://localhost:9000/api/sucursales/635108b3c928c111f25caddc HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Surcursal Uno",
+    "codigo": 801,
+    "tlf": 555080,
+    "adress": "Blv Insurgentes 5561",
+    "adresspace": "32.49809, -116.8695",
+    "status": "Abierto"
+}
+
+###crear metodopago
+POST http://localhost:9000/api/pagos HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Efectivo",
+    "codigo": "Cantidad a pagar"
+}
+
+
+###editar metodo pago
+PUT http://localhost:9000/api/pagos/63510b9c3a8180e2ce296fb3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Efectivo",
+    "codigo": "200 varos pa"
+}
+
+###obtener metodo pago
+GET http://localhost:9000/api/pagos HTTP/1.1
+
+
+
+###generando producto
+POST http://localhost:9000/api/productos HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Procesador amd ryzen 7 5700x",
+    "sku": 42892319202,
+    "stock": 10,
+    "sucursal": "Sucursal Dos",
+    "precio": "$5,400 mxn",
+    "status": "Disponible"
+}
+
+
+###obtener productos
+GET http://localhost:9000/api/productos HTTP/1.1
+
+###obtener productos por id
+GET http://localhost:9000/api/productos/63510e92a774cc56dd704cfb HTTP/1.1
+
+###editar producto
+PUT http://localhost:9000/api/productos/63510edda774cc56dd704cfd HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Procesador amd ryzen 7 5700xxxxxxxxxx",
+    "sku": 42892319202,
+    "stock": 10,
+    "sucursal": "Sucursal Dos",
+    "precio": "$5,400 mxn",
+    "status": "Disponible"
+}
+
+###borrar producto
+DELETE http://localhost:9000/api/productos/63510edda774cc56dd704cfd HTTP/1.1
+
+
+
+
+###generando venta
+POST http://localhost:9000/api/ventas HTTP/1.1
+Content-Type: application/json
+
+{
+    "producto": "Nvidia rtx 3070ti",
+    "total": 2,
+    "sucursal": "Sucursal Uno",
+    "usuario": "$pepito gonzales",
+    "metodoPago": "Deposito Bancario"
+}
+
+###obtener ventas
+GET http://localhost:9000/api/ventas HTTP/1.1
+
+###obtener ventas por id
+GET http://localhost:9000/api/ventas/6351129535c24df9082d3511 HTTP/1.1
